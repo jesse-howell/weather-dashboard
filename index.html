@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <section class="city-search"></section>
+    <div class="city">
+        <h2>Search for a city:</h2>
+        <textarea name="city-name" id="city-name" cols="30" rows=""></textarea>
+    </div>
+    <div class="search">
+        <button class="search" type="submit">Search</button>
+    </div>
+    <div class="popular-cities">
+        <div class="popular-city">
+        <button id="Atlanta">Atlanta</button>
+        </div>
+        <div class="popular-city">
+            <button id="Denver">Denver</button>
+        </div>
+        <div class="popular-city">
+            <button id="Seattle">Seattle</button>
+        </div>
+        <div class="popular-city">
+            <button id="San Francisco">San Francisco</button>
+        </div>
+        <div class="popular-city">
+            <button id="Orlando">Orlando</button>
+        </div>
+        <div class="popular-city">
+            <button id="New York">New York</button>
+        </div>
+        <div class="popular-city">
+            <button id="Chicago">Chicago</button>
+        </div>
+        <div class="popular-city">
+            <button id="Austin">Austin</button>
+        </div> 
+    </div>
+    <div class="forecast">
+        <textarea name="daily" id="daily-forecast" cols="90" rows="10"></textarea>
+        <h3>5 Day Forecast:</h3>
+        <textarea name="days" id="day-1" cols="20" rows="10"></textarea>
+        <textarea name="days" id="day-2" cols="20" rows="10"></textarea>
+        <textarea name="days" id="day-3" cols="20" rows="10"></textarea>
+        <textarea name="days" id="day-4" cols="20" rows="10"></textarea>
+        <textarea name="days" id="day-5" cols="20" rows="10"></textarea>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
