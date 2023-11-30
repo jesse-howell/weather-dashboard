@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- added bootstrap css cdn link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <!-- removed style.css -->
     <title>Weather Dashboard</title>
 </head>
 <body>
@@ -62,13 +62,16 @@
             <button id="Austin" type="button" class="btn btn-secondary">Austin</button>
         </div> 
     </form>
-    <div class="forecast">
+    <!-- added col and p divs to 5-day -->
+    <div class="col col-md-8">
+     <div class="p-2">
         <h3>5 Day Forecast:</h3>
         <textarea name="days" id="day-1" cols="20" rows="10"></textarea>
         <textarea name="days" id="day-2" cols="20" rows="10"></textarea>
         <textarea name="days" id="day-3" cols="20" rows="10"></textarea>
         <textarea name="days" id="day-4" cols="20" rows="10"></textarea>
         <textarea name="days" id="day-5" cols="20" rows="10"></textarea>
+     </div>   
     </div>
 </main>
 </body>
