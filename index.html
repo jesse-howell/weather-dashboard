@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- added bootstrap css cdn link-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- removed style.css -->
     <title>Weather Dashboard</title>
-<script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 
 </head>
+
 <body>
     <header>
         <!-- added bootstrap js cdn link -->
         <h1>Weather Dashboard</h1>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
     </header>
     <!-- added main and divs for search -->
     <main class="container-fluid text-light min-vh-100">
         <div class="row">
             <div class="col col-md-4">
-              <div class="p-2">
-                <h2>Search for a city:</h2>
-                <form id="loc-search">
-                  <div class="mb-2">
-                    <input
-                      type="text"
-                      placeholder="Search"
-                      class="form-control"
-                      id="q"
-                      name="q"
-                    />
-                  </div>
+                <div class="p-2">
+                    <h2>Search for a city:</h2>
+                    <form id="loc-search">
+                        <div class="mb-2">
+                            <input type="text" placeholder="Search" class="form-control" id="q" name="q" />
+                        </div>
+
+                        <!-- changed div classes to mb-2 p-2 -->
+                        <div class="mb-2 p-2">
+                            <button id="search-btn" type="button" class="btn btn-primary">Search</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="Atlanta" type="button" class="btn btn-secondary">Atlanta</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="Denver" type="button" class="btn btn-secondary">Denver</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="Seattle" type="button" class="btn btn-secondary">Seattle</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="San Francisco" type="button" class="btn btn-secondary">San Francisco</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="Orlando" type="button" class="btn btn-secondary">Orlando</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="New York" type="button" class="btn btn-secondary">New York</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="Chicago" type="button" class="btn btn-secondary">Chicago</button>
+                        </div>
+                        <div class="mb-2 p-2">
+                            <button id="Austin" type="button" class="btn btn-secondary">Austin</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        <!-- changed div classes to mb-2 p-2 -->
-            <div class="mb-2 p-2">
-                <button id="search-btn" type="button" class="btn btn-primary">Search</button>
+            <!-- added col and p divs to 5-day -->
+            <div class="col col-md-8">
+                <div class="p-2">
+                    <!-- removed textareas -->
+                    <!-- changed h3 to h2 -->
+                    <h2>5 Day Forecast:</h2>
+                    <div class="forecast"></div>
+                </div>
             </div>
-            <div class="mb-2 p-2">
-                <button id="Atlanta" type="button" class="btn btn-secondary">Atlanta</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="Denver" type="button" class="btn btn-secondary">Denver</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="Seattle" type="button" class="btn btn-secondary">Seattle</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="San Francisco" type="button" class="btn btn-secondary">San Francisco</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="Orlando" type="button" class="btn btn-secondary">Orlando</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="New York" type="button" class="btn btn-secondary">New York</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="Chicago" type="button" class="btn btn-secondary">Chicago</button>
-            </div>
-            <div class="mb-2 p-2">
-                <button id="Austin" type="button" class="btn btn-secondary">Austin</button>
-            </div> 
-                </form>
-    <!-- added col and p divs to 5-day -->
-    <div class="col col-md-8">
-     <div class="p-2">
-        <!-- removed textareas -->
-        <!-- changed h3 to h2 -->
-        <h2>5 Day Forecast:</h2>
-        <div class="forecast"></div>
-     </div>   
-    </div>
-</div>
-</main>
+        </div>
+    </main>
 </body>
+
 </html>
