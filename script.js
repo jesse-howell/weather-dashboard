@@ -8,9 +8,11 @@ const buttonORL = document.querySelector("#Orlando");
 const buttonNYK = document.querySelector("#New York");
 const buttonCHI = document.querySelector("#Chicago");
 const buttonAUS = document.querySelector("#Austin");
+// added apiKey const
+const apiKey = "29f6ddfef096bce3ebb4f3b252bafe28"
 
 // get weather (lat, lon)
-function getGeoWeather(lat, lon) {
+function fetchCityWeather(lat, lon) {
     fetch(
       "https://api.openweathermap.org/data/2.5/forecast?appid=29f6ddfef096bce3ebb4f3b252bafe28&lat=" + lat + '&lon=' + lon + '&units=imperial')
       .then(function (response) {
@@ -22,26 +24,22 @@ function getGeoWeather(lat, lon) {
       });
     }
 // get city geo data
-function getGeoData() {
-    fetch(
-      "https://api.openweathermap.org/geo/1.0/direct?appid=29f6ddfef096bce3ebb4f3b252bafe28&limit=1&q=Denver"
-    )
+
+function fetchCityData() {
+  const cities = ["Atlanta", "Denver", "Seattle", "San Francisco", "Orlando", "New York", "Chicago", "Austin"];
+// changed for to forEach
+    cities.forEach(city => {
+      fetch("https://api.openweathermap.org/geo/1.0/direct?appid=29f6ddfef096bce3ebb4f3b252bafe28&limit=1&q=$" + city)
       .then(function (response) {
         return response.json();
       })
+    })
       .then(function (data) {
         console.log(data);
-        getGeoWeather(data[0].lat, data[0].lon);
+        fetchCityWeather(data[0].lat, data[0].lon);
       });
-// for loop to be paired with button clicks
-      const city = ["Atlanta", "Denver", "Seattle", "San Francisco", "Orlando", "New York", "Chicago", "Austin"];
-      for (let i = 0; i < city.length; i++) {
-        console.log(city + i++);
-      }
-  }
   // call geo data function
-
-  getGeoData();
+  fetchCityData();
 // added handleSearch for search bar
   function handleSearch(event) {
     event.preventDefault();
@@ -51,7 +49,17 @@ function getGeoData() {
     if (format) {
       type = format;
     }
-    const url = "https://api.openweather.org" + type + "/?q=" + q + "&fo=json";
+    const url = "https://www.openweathermap.org" + type + "/?q=" + q + "&fo=json";
     console.log("URL", url);
 
   };
+
+};
+// added event listener for buttons
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+  button.addEventListener('click', function(fetchCityData) {
+    console.log('clicked', fetchCityData);
+    
+  });
+});
